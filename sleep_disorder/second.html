@@ -1,0 +1,668 @@
+<html>
+<head>
+<title>first</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="pc.css" rel="stylesheet" type="text/css">
+</head>
+	<style>
+	
+
+*{padding:0; margin:0;}
+    ul,li,ol,li{list-style:none;}
+    a{display:block; color:#333; text-decoration:none;}
+    h1{font-size:20px;}
+    h2{font-size:16px;}
+    h3{font-size:14px;}
+		h4 {font-size: 18px; }
+
+    @media screen and (min-width : 768px ){
+      .only-m{display:none;}
+
+      header{width:100%; text-align:center;  background: #000000;}
+      header .head-content{max-width:1280px; width:100%; padding:10px 10px 7px; margin:auto; overflow:hidden;}
+      header .head-content:after{clear:both; display:block; content:"";}
+
+      header h1{float:left}
+      header h1 a{color:#000; text-transform:uppercase;}
+
+      header .nav{display:inline-block; margin:auto; vertical-align:middle;}
+      header .nav > ul{margin-top:10px;}
+      header .nav > ul:after{clear:both; display:block; content:"";}
+      header .nav > ul li.dep02{float:left}
+      header .nav > ul li.dep02 h2{margin:0 10px;}
+      header .nav > ul li.dep02 h2 a{padding:0 3px; color:#ebebeb;}
+      header .nav > ul li.dep02.active h2 a{color:#000;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03{max-height:0; position:relative; margin-top:10px; transition:all 0.4s linear;}
+      header .nav > ul li.dep02.active h2 ~ ul.dep03{max-height:200px;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3 a{padding:4px 0;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3 a:hover{color:#000;}
+
+    }
+
+
+
+    @media screen and (max-width:768px) {
+      .only-m{display:block;}
+
+      .m-btn-nav{width:30px; height: 24px; float:right; padding:5px; margin-top:10px; background: transparent; border: 0;}
+      .m-btn-nav span{display:block; width:15px; height:2px; background:#fff; position:relative;}
+      .m-btn-nav span:before{display:block; width:15px; height:2px; background:#fff; position:absolute; top:-5px; left:0; content:" ";}
+      .m-btn-nav span:after{display:block; width:15px; height:2px; background:#fff; position:absolute; bottom:-5px; left:0; content:" ";}
+
+
+
+      header{width:100%; text-align:center;  background:rgba(0, 0, 0 , 0.5); position:fixed; top:0; left:0;}
+      header .head-content{max-width:100%; width:100%; padding:10px 10px 0px; margin:auto; overflow:hidden; box-sizing:border-box;}
+      header .head-content:after{clear:both; display:block; content:"";}
+
+      header h1{float:left; margin-top:10px;}
+      header h1 a{color:#000; text-transform:uppercase;}
+
+      header .nav{display:inline-block; width:100%; margin:auto; vertical-align:middle;}
+      header .nav > ul{display:none;}
+      header .nav > ul.active{display:block;}
+      header .nav > ul:after{clear:both; display:block; content:"";}
+      header .nav > ul li.dep02{float:none; width:100%; overflow: hidden;}
+      header .nav > ul li.dep02 h2{width:100%; margin:0 0px;}
+      header .nav > ul li.dep02 h2 a{padding:5 10px; color:#ebebeb; text-align:center;}
+      header .nav > ul li.dep02.active h2 a{color:#000;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03{display: none; max-height:200px; position:relative; margin-top:0px; transition: none;}
+      header .nav > ul li.dep02.active h2 ~ ul.dep03{display: block; max-height:200px;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3 a{padding:4px 0;}
+
+    }
+
+button{
+	width:120px;
+	height: 40px;
+	color:#fff;
+	background: #000000;
+	font-size: 16px;
+	border:none;
+	border-radius: 
+	box-shadow: 0 4px 16px rgba(0,79,255,0.3);
+	transition:0.3s;
+	position: absolute; left: 50%; 
+	
+	transform: translate(-50%,-50%);
+}
+button:focus {
+	outline:0;
+}
+button:hover{
+	background: #252525;
+	cursor: pointer;
+	
+}
+
+	#menubar {
+		background:#A0D0FE ; 
+	}
+	#menubar ul { 
+	margin : 0;
+	padding: 0;
+	width: 1920
+		px;
+		 }
+	
+	#menubar ul li {
+		display :inline-block;
+		list-style-type: none;
+		padding: 20px 20px;
+	}
+
+	#menubar ul li a {
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	#menubar ul li a:hover {
+		color: #FFF194;
+	}
+	
+		
+		
+			P { background-color: #A1CFFF; padding: 10px;}
+	
+		hr {border: 2px solid #A0CEFF;width: 80px}
+		
+
+
+/* 중앙정렬 코드- 삭제하고 사용하세요 */
+.gallerylist {position:absolute;top:50%;left:100%;transform:translate(-50%,-50%);}
+* {margin:0;padding:0;box-sizing:border-box;} /* 모든 요소 마진패딩 리셋 */
+/* 중앙정렬 코드-삭제하고 사용하세요 */
+
+.gallerylist {max-width:1920px;width:100%;margin:0 auto;}
+.gallerylist > ul {font-size:0; }
+.gallerylist > ul > li {display:inline-block;vertical-align:top;width:35%;}
+.gallerylist > ul > li > a {display:block;width:auto;text-decoration: none; margin:25px;}
+.gallerylist > ul > li > a .screen {position:relative; overflow:hidden;}
+		
+.gallerylist > ul > li > a .screen .top {position:absolute;top:600;left:10px;z-index:2;color:#fff;font-size:20px;transition:all .35s;}
+.gallerylist > ul > li > a .screen .bottom {position:absolute;top:400;left:10px;z-index:2;color:#fff;font-size:17px;transition:all .35s;}
+		
+.gallerylist > ul > li > a .screen img {width:100%;}
+.gallerylist > ul > li > a h1 {font-size:20px;text-align:center;padding:20px;color:#FFFFFF;}
+.gallerylist > ul > li > a .screen::after {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1;opacity:0; transition:all .35s;}
+
+.gallerylist > ul > li > a:hover .bottom {top:50%;}
+.gallerylist > ul > li > a:hover .screen::after {opacity:80;}
+
+		
+
+
+
+} 
+		body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+	.tt 
+		{ position: relative; display: inline-block;  Sienna; background-color: ; } 
+		
+	.tt .tt-text 
+		{ visibility: hidden; width: 200px; background-color: #1D1D1D; color:#FFFFFF ; text-align: center; border-radius: 10px; padding: 10px 5px; position: absolute; z-index: 1; top: 200%; left: 50%; margin-left: -105px; } .tt .tt-text::after { content: ""; position: absolute; bottom: 100%; left: 50%; margin-left: -10px; border-width: 10px; border-style: solid; border-color: transparent transparent #1D1D1D transparent; } .tt:hover .tt-text { visibility: visible; }
+
+
+		#list {background:#A1CFFF; }
+		
+		.box1 {
+			display: inline-block;
+            width: ;
+            height: ;
+		     margin: 10px 10px;
+            text-align: center;
+            vertical-align: middle;
+            line-height:;
+            color: #000000;
+		
+		
+        }
+		
+		
+		.box2 {
+			display: inline-block;
+            width: 620px;
+            height: ;
+		     margin: 10px 10px;
+		    top : 50%;
+			left : 50%;
+            text-align: left ;
+            vertical-align: middle;
+            line-height:;
+            color: #000000;
+		
+		
+        }
+		
+		
+		.box3 {
+			display: inline-block;
+            width: 600px;
+            height: ;
+		     margin: 10px 10px;
+		    top : 50%;
+			left : 50%;
+            text-align: center;
+            vertical-align: middle;
+            line-height:;
+            color: #FFFFFF;
+		
+		
+        }
+        
+			.box4 {
+			display: inline-block;
+            width: 600px;
+            height: ;
+		     margin: 10px 10px;
+		    top : 50%;
+			left : 50%;
+            text-align: left;
+            vertical-align: middle;
+            line-height:;
+            color: #FFFFFF;
+		
+		
+        }
+        
+	UL.redUL { color:red; }
+UL.redUL DIV { color:black; }
+	
+		span{padding:30px 30px; margin: 10px 10px; height:; width: 750px; background-color :#FFFFFF; display: inline-block; text-align: left;}  
+		
+	</style>
+	
+
+
+<center>
+	
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	
+	
+		
+</header>
+
+	<nav id="menubar"><center> 
+	 <ul>
+		 <li><a href="index.html">홈</a>  </li>
+		 <li><a href="first.html">정의 및 종류</a> </li>
+		<li><a href="second.html">진단 및 치료</a></li>
+		 <li><a href="third.html">수면 Tip</a></li>
+		 
+		
+</ul>
+		
+	</nav>
+<!-- Save for Web Slices (2 분할.psd) -->
+<center> 
+	
+<article> 
+	<div style="background:" #FFFFFF;""> <br>
+		<a name="insomnia">
+			
+			
+				<h1> 불면증이란? </h1><br>
+	<hr>
+			<div class="box1">
+			<br>
+			잠들기 힘들거나, 잠은 들지만 자주 깨고, 새벽에 너무 일찍 잠에서 깨어 수면부족 상태, <br>
+				이로 인해 낮동안 피로감, 졸음, 의욕상실 등의 결과를 초래하는 대표적인 수면장애</div>   <br>
+			<img src="images/1.jpg" width="300" height="300" alt=""></div> 
+<br>
+	 
+		<h1> 불면증 원인 </h1><br>
+		<hr>
+			<br>
+		<img src="images/37.jpg" width="300" height="300" alt=""> <img src="images/36.jpg" width="300" height="300" alt="">
+			<br>
+		<div class="box1">
+		<ul>
+		<br>
+		
+			<ul>
+	      <li>  1. 수면 리듬이 약한 사람이 스트레스를 겪어 수면리듬이 악화 되는 경우
+					</li> 
+		<br>
+		<li>  2. 우울증, 불안장애 및 기타 정신질환이 있는 경우 </li><br>
+			
+					
+		</ul>
+			</ol>
+		</div>
+	<br>
+			<br>
+			<br>
+	 
+		<h1> 불면증 진단 </h1><br>
+		<hr>
+		<div class="box1">
+			<br>
+			1. 평소의 수면패턴을 알아보기 위한 
+			<p class="tt">수면일지<span class="tt-text">자신의 수면 패턴 기록</span></p> 쓰기 <br> <br>
+			2. 동반되는 수면장애를 찾기 위하여 <p class="tt">피츠버그수면척도<span class="tt-text">수면의 질 지수 설문지</span></p>시행 <br><br>
+			3. 6개월 이상 지속되는 만성불면증으로 자다가 깨는 증상이 주가 되거나   
+			코골이가 동반되어 있는 경우에는 <p class="tt">수면다원검사<span class="tt-text">수면 중에 발생하는 비정상적인 상태를 진단하려고 여러 기구를 이용하여 수면 중 상태를 기록, 분석하는 검사</span></p>를 시행 <br><br>
+			4. 
+			불안증이나 우울증을 평가하기 위한 <p class="tt">자가설문지<span class="tt-text">스트레스 및 우울증 지수 설문지</span></p> 시행
+
+		</div>
+<br>
+	 <br>
+			<br>
+		<h1> 불면증 치료 </h1><br>
+		<hr>
+			<br>
+1. 불면증 원인 요소 제거
+			<br> <br>
+			2. 쾌적한 수면을 위해 올바른 수면습관 갖기  <br><br>
+			3. 약물치료, 인지행동치료, 이완 요법, 자극 조절법 등을 시행 <br><br>
+			4. <p class="tt">수면일지<span class="tt-text">잠자리에 드는 시간, 일어나는 시간, 카페인이 함유된 음료를 마신 것, 하루 동안의 운동량 등을 기록</span></p> 적기
+			
+	 <br>
+			<br>
+			<br>
+		<h1> 불면증 예방법 </h1><br>
+		<hr>
+		<div class="box1">
+			<br>
+			1. 매일 같은 시각에 일어나기  <br> <br>
+			2. 평소 하루에 침대에서 보내는 시간 제한하기  <br> <br>
+			3. 카페인, 니코틴, 알코올과 같은 중추신경계를 자극하는 약물 제한하기<br> <br>
+			4. 치료로서 낮음을 자는 경우를 제외하고는 낮잠은 피하기<br> <br>
+			5. 신체운동을 하고 저녁에 자극적 행동은 피하기<br> <br>
+			6. 잠자기 전 따뜻한 물로 20분 정도 샤워하기<br> <br>
+			7. 잠자기 전 과식은 피하기<br> <br>
+			8. 안락한 수면 조건 유지하기<br> <br>
+		</div>
+		</a>
+		
+	<br>
+		<a name="narcolepsy">
+					<div style= "background: #000000;"">
+			<br><font color="#FFFFFF";>
+			
+			<br>
+									 
+		<h1> 기면증이란? </h1><br>
+		<hr>
+									 
+			<br>
+		<div class="box3">야간에 최소 7시간 이상 수면을 취하고서도 각성물질이 부족하여 <br>
+						 잠에서 깨어나지 못해 낮에 과도한 졸음을 호소하는 상태 </div>
+
+									 
+ <br><br>
+		<img src="images/2.jpg" width="300" height="300" alt="">
+<br><br>
+															   <br>
+	 
+		<h1> 기면증 원인 </h1><br>
+		<hr>
+			<br>
+			<br>
+					<img src="images/7.jpg" width="300" height="300" alt="">
+				 <br>
+					 <br>
+		원인은 의학적으로 명확히 밝혀지지는 않았다. <br>
+	 가장 유력한 설은 뇌에 있는 <p class="tt">하이포크레틴<span class="tt-text">사람을 깨어있게 하는 호르몬</span></p> 부족으로 보고있다. <br><br>
+		 * 수면시간이 충분하다 -> 각성물질 분비 No -> 잠을 계속 잔다
+		<br>				
+															  <br>
+			<br>
+	 
+		<h1> 기면증 진단 </h1><br>
+		<hr>
+															  <br>
+				 <div class="box2">	<p>
+														 
+														 
+															   <from>
+										  <br>
+		<input type="checkbox" value="1"> 어떤 일에 집중할 때 졸음이 마구 쏟아진다.<br><br>
+		<input type="checkbox" value="1"> 밤에 잠을 자도 낮에 계속 졸음이 느껴진다.<br><br>
+		<input type="checkbox" value="1"> 한창 활동중일 때도 졸음 때문에 활동을 지속하기 힘들다.<br><br>
+		<input type="checkbox" value="1"> 깨어있는 상태를 유지하기 어렵다.<br><br>
+								
+		<b>이러한 증상들이 3개월 이상 지속되면 기면증을 의심해 볼 수 있다!</b>
+										
+										</div>
+		<br></from>	
+									
+			<div class="box3"><details>
+							<summary>진료 방법</summary> 
+1. 1박 2일 동안 수면검사실에서 <p class="tt">야간수면다원검사<span class="tt-text">수면 중에 발생하는 비정상적인 상태를 진단하려고 여러 기구를 이용하여 수면 중 상태를 기록, 분석하는 검사</span></p>와 주간검사를 연이어 약 22시간 동안 시행<br><br>
+2. 야간수면다원검사에서 낮 동안 졸음을 초래할 만한 수면장애가 없으며, 객관적으로 확인된 심한 주간졸음과 렘수면 이상 소견을 주간검사로 진단 
+
+								</details>									</div>
+
+<br>
+	 <br>
+				<br>								
+		<h1> 기면증 치료 </h1><br>
+		<hr>
+															   <div class="box3">
+			<br>
+			 1. 수면 검사실에서 <p class="tt">수면다원검사<span class="tt-text">수면 중에 발생하는 비정상적인 상태를 진단하려고 여러 기구를 이용하여 수면 중 상태를 기록, 분석하는 검사</span></p> 통해 진단 <br> <br>
+			 2. 장기간 사용할 수 있는 각성제나 탈력발작을 억제하는 항우울제 계통의 약물치료 <br><br>
+			 3. 생활습관 교정, 심리 상담, 그리고 약물 내성을 줄이기 위한 통합적 치료<br><br>
+													</div>			  
+	 <br>
+										
+		<h1> 기면증 예방법 </h1><br>
+		<hr>
+			<br>
+  <div class="box3">
+			1. 규칙적인 수면 취하기  <br> <br>
+			2. 매일 같은 시간에 잠자리에 들고 같은 시간에 깨기  <br> <br>
+			3. 잠자리에서 스마트폰을 보는 습관 버리기<br> <br>
+			4. 점심시간에 잠깐 낮잠 자기<br> <br>
+			</div>
+					  
+	</a></div>
+	 <br>
+	<a name="anxietastibiarum">
+				<h1> 하지불안증후군이란? </h1><br>
+	<hr>
+			<br>
+					  <div class="box1">
+			 잠들 무렵 다리에 느껴지는 말로 표현하기 힘든 불편감으로 잠들기 힘들어, <br>수면부족을 초래하는 수면장애 
+									   </div>
+					 
+ <br>
+		<img src="images/3.jpg" width="300" height="300" alt="">
+<br>
+															   <br>
+	 <br>
+		<h1> 하지불안증후군 원인 </h1><br>
+		<hr>
+			<br>
+		<img src="images/9.jpg" width="300" height="300" alt=""> <img src="images/8.jpg" width="300" height="300" alt="">
+			<br></div>
+				<div class="box1">	
+		<br>
+	1. 연구자들은 뇌의 도파민 시스템의 불균형이 관련된 것으로 추측 <br><br>
+	2. 일찍 발병한 하지불안 증후군의 경우 절반 정도에서 유전적 경향<br><br>
+	3. 스트레스 <br><br>
+	4. 임신이나 호르몬 변화 <br><br>
+	5. 철분결핍 <br><br>
+	6. 종종 항우울제, 소화제들의 약물 부작용	
+								 </div>
+	<br><br>																											
+		
+	<br>
+	 
+		<h1> 하지불안증후군 진단 </h1><br>
+		<hr>
+			<br>
+			 <div class="box2">	<p>
+															   <from>
+										  <br>
+		<input type="checkbox" value="1"> 다리가 불편하고 이상감각 없이도 다리를 움직이고 싶은 충동이 나타난다.<br><br>
+		<input type="checkbox" value="1"> 쉬거나 움직이지 않을 때 움직이고자하는 충동과 불편함이 시작되거나 심해진다.<br><br>
+		<input type="checkbox" value="1"> 불쾌한 감각이 걷거나 스트레칭과 같은 운동에 의해 부분적이나 거의 완화된다.<br><br>
+		<input type="checkbox" value="1"> 감각이 낮보다는 저녁이나 밤에 악화되거나 저녁이나 밤에만 나타난다.<br><br>
+		<input type="checkbox" value="1"> 다리가 저리고, 벌레가 기어다니고 쑤시고 타는 느낌, 전류가 흐르는 느낌이 든다.<br><br>
+																		
+									
+										</p> </div>
+		<br></from>																												
+
+			
+		<h1> 하지불안증후군 치료 </h1><br>
+		<hr>
+			<br>
+            1. 철분제 섭취<br> <br>
+			2. 잠자는 시간을 일정하게 유지  <br><br>
+			3. 불필요하게 자꾸 눕는 습관 고치기<br><br>
+			4. 과다 카페인 섭취, 과음 피하기 <br><br>
+			5. 스트레스 받지 말기<br><br>
+			6. 잠들기 전 요가나 명상 같은 이환 요법하기 <br><br>
+			7. 낮 동안 다리를 적절하게 움직이기<br><br>	
+			8. 증상이 나타날 경우에는 더운찜질 해주기 <br><br>			
+										
+										
+		
+	 <br>
+		<h1> 하지불안증후군 예방법 </h1><br>
+		<hr>
+			<br>
+			1. 자주 스트레칭 하기 <br><br>
+            2. 스트레스 받지 않기 <br><br>
+            3. 적절한 운동하기 <br><br>
+            4. 규칙적인 수면 습관 갖기 <br><br>
+            5. 카페인이 들어간 식음료 삼가하기 <br><br>
+            
+								
+			
+		</a>
+		<a name="Snoring">
+					<div style= "background: #000000;"">
+			<br><font color="#FFFFFF";>
+			
+			<br>
+									 
+		<h1> 코골이 및 수면무호흡이란? </h1><br>
+		<hr>
+									 
+			<br>
+						<div class="box3">		코골이는 매우 흔한 생리적인 현상이며, <br>
+							코골이가 있는 사람의 75%는 수면 중에 호흡이 멈추는 수면무호흡증을 동반 </div>
+						
+
+									 
+ <br><br>
+		<img src="images/4.jpg" width="300" height="300" alt="">
+<br>
+				<br>											   <br>
+	
+		<h1>코골이 및 수면무호흡 원인 </h1><br>
+		<hr>
+			<br>
+			<br>
+				 	<img src="images/10.jpg" width="300" height="300" alt="">    <img src="images/11.jpg" width="300" height="300" alt="">
+				 <br>
+					 <br><div class="box4">
+					    1. 불규칙적인 식생활 및 고탄수화물, 고지방 음식을 자주 섭취는 비만인 <br><br>
+						2. 음주 및 흡연<br><br>
+						3. 상기도의 공간이 좁아지는 해부학적 이상<br><br>
+					    4. 턱이 비정상적으로 작거나 목이 짧고 굵은 사람<br><br>
+						5. 인두의 기도 확장근의 힘이 횡격막에 의한 흉곽 내 음압을 이겨내지 못할 때<br><br>
+						6. 소아는 편도 비대와 아데노이드 비대 때문<br><br>
+								  <br>
+						</div>
+		<h1> 코골이 및 수면무호흡 진단 </h1><br>
+		<hr>
+															  <br>
+						<div class="box2">	<p> 
+															   <from>
+										  <br>
+		<input type="checkbox" value="1"> 깊은 잠을 자지 못하고, 낮 동안 피로감, 자도 잔 것 같지 않은 느낌이 든다. <br><br>
+		<input type="checkbox" value="1"> 아침 두통, 무기력감, 중력과 기억력 저하, 우울감을 느낀다.<br><br>
+		<input type="checkbox" value="1"> 야간 빈뇨, 식도역류, 과다 발한, 심한 잠꼬대, 몽유병 등이 나타난다.<br><br>
+		<input type="checkbox" value="1"> 상체를 일으켜 반쯤 앉은 자세를 취하며 호흡을 하려다 갑자기 쓰러진다. <br><br>
+		<input type="checkbox" value="1"> 입으로 숨을 쉬는데 목 안에 무엇인가 막혀 가까스로 숨을 쉬는 모습을 보인다. <br><br>
+		<input type="checkbox" value="1"> 호흡이 힘들어 가슴을 헐떡이며 땀을 많이 흘리기도 한다. <br><br>								
+		<input type="checkbox" value="1"> 주간 졸림증, 성격 변화 등 이산화탄소 축적으로 인한 심한 두통이 나타난다. <br><br>
+		<input type="checkbox" value="1"> 학습 부진이나 발달 지연, 입으로 숨을 쉬게 되어 말처럼 얼굴이 길어졌다. <br><br>
+																   
+																   
+																   </p></div>
+		<br></from>	
+						<details>
+							<summary>진료 방법</summary>
+							 1. 우선 병력으로 진단하게 되는데, 본인이나 배우자, 또는 가족들을 통해 증상을 듣고 진단 <br><br>
+						2. 주간에 얼마나 졸리는지에 대한 문진을 통해서도 코골이나 무호흡의 심한 정도를 파악<br><br>
+						3. 신체검진으로 체중이나 BMI 지수를 측정하거나 외양 특히 얼굴과 목의 모양을 관찰하고 비강, 구강, 인두, 후두의 검진을 병행하여 주된 유발 원인을 파악<br><br>
+						4. 정확한 수면의 평가를 위해서는 <p class="tt">수면다원검사<span class="tt-text">수면 중에 발생하는 비정상적인 상태를 진단하려고 여러 기구를 이용하여 수면 중 상태를 기록, 분석하는 검사</span></p>를 시행<br><br>
+						5. 병원에서 하룻밤을 자면서 수면의 전 과정을 조사<br><br>
+                        6. 자는 동안 호흡, 맥박, 움직임, 코골이, 혈중 산소 포화도, 뇌파 등을 측정하고, 그 외에 기도의 폐쇄 부위를 파악하기 위한 검사 등을 동시에 시행<br><br>
+						7. 기도의 폐쇄 부위를 확인하기 위해서 비인두 섬유경을 이용하여 인두부에서 어느 부위가 막히는지를 직접 관찰하거나 방사선 투시 검사를 통해 확인<br><br>
+						8. 두개골 계측 방사선 검사로 뼈 부분의 해부학적 지표들을 파악하여 뼈의 구조적인 문제를 확인<br><br>
+						9. <p class="tt">수면다원검사<span class="tt-text">수면 중에 발생하는 비정상적인 상태를 진단하려고 여러 기구를 이용하여 수면 중 상태를 기록, 분석하는 검사</span></p>시에는 코를 통하여 관을 거치하고 수면의 전 과정을 통해 어느 부위가 막히는지 추적하는 검사<br><br><p>
+			
+			</p>
+						</details>
+				
+                       
+		
+	
+
+
+<br>
+	
+												
+		<h1> 코골이 및 수면무호흡 치료 </h1><br>
+		<hr>
+			<br>
+						<details>
+							<summary>비수술적인 방법</summary>
+							<p>
+								
+			- 양압기를 사용하여 수면 중 공기를 지속적으로 기도로 공급해 인두부 연조직의 허탈을 방지<br><br>
+			- 구강 내 장치를 통해 혀가 목 뒤로 처지는 것을 방지<br><br>
+			- 옆으로 잠자기 <br><br>
+			- 체중 감량<br><br>
+			- 금주 및 금연<br><br></p>
+						</details>
+						<br>
+						<details>
+							<summary>수술적인 방법</summary>
+							<p>
+			- 비강수술(비중격 만곡 및 하비갑개 비후에 대한 교정술)<br><br>
+            - 인두부 수술(편도 및 구인두의 점막을 절제하는 구개인두 성형술, 고주파 온열 구개술)<br><br>
+			- 설부 축소수술<br><br>
+			- 두경부 골격수술(이설근전진술과 설골근절개술, 양측 상악전진술)<br><br>
+			</p>
+						</details>
+			
+			
+						<br>
+			
+            
+						
+	 <br>
+												
+		<h1> 코골이 및 수면무호흡 예방법 </h1><br>
+		<hr>
+			<br>
+						1. 체중 조절 <br><br>
+						2. 금주 및 금연 <br><br>
+						3. 취침시간의 온도 조절하기<br><br>
+						4. 옆으로 누워자는 습관 및 낮은 베개 배고 자기<br><br>
+						5. 규칙적인 운동하기 
+
+			
+			
+					  
+	</a></div>
+<!-- End Save for Web Slices -->
+</body>
+		   
+        
+    
+</html>

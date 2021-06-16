@@ -1,0 +1,660 @@
+<html>
+<head>
+<title>first</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="pc.css" rel="stylesheet" type="text/css">
+</head>
+	<style>
+	
+
+*{padding:0; margin:0;}
+    ul,li,ol,li{list-style:none;}
+    a{display:block; color:#333; text-decoration:none;}
+    h1{font-size:20px;}
+    h2{font-size:16px;}
+    h3{font-size:14px;}
+
+    @media screen and (min-width : 768px ){
+      .only-m{display:none;}
+
+      header{width:100%; text-align:center;  background: #000000;}
+      header .head-content{max-width:1280px; width:100%; padding:10px 10px 7px; margin:auto; overflow:hidden;}
+      header .head-content:after{clear:both; display:block; content:"";}
+
+      header h1{float:left}
+      header h1 a{color:#000; text-transform:uppercase;}
+
+      header .nav{display:inline-block; margin:auto; vertical-align:middle;}
+      header .nav > ul{margin-top:10px;}
+      header .nav > ul:after{clear:both; display:block; content:"";}
+      header .nav > ul li.dep02{float:left}
+      header .nav > ul li.dep02 h2{margin:0 10px;}
+      header .nav > ul li.dep02 h2 a{padding:0 3px; color:#ebebeb;}
+      header .nav > ul li.dep02.active h2 a{color:#000;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03{max-height:0; position:relative; margin-top:10px; transition:all 0.4s linear;}
+      header .nav > ul li.dep02.active h2 ~ ul.dep03{max-height:200px;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3 a{padding:4px 0;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3 a:hover{color:#000;}
+
+    }
+
+
+
+    @media screen and (max-width:768px) {
+      .only-m{display:block;}
+
+      .m-btn-nav{width:30px; height: 24px; float:right; padding:5px; margin-top:10px; background: transparent; border: 0;}
+      .m-btn-nav span{display:block; width:15px; height:2px; background:#fff; position:relative;}
+      .m-btn-nav span:before{display:block; width:15px; height:2px; background:#fff; position:absolute; top:-5px; left:0; content:" ";}
+      .m-btn-nav span:after{display:block; width:15px; height:2px; background:#fff; position:absolute; bottom:-5px; left:0; content:" ";}
+
+
+
+      header{width:100%; text-align:center;  background:rgba(0, 0, 0 , 0.5); position:fixed; top:0; left:0;}
+      header .head-content{max-width:100%; width:100%; padding:10px 10px 0px; margin:auto; overflow:hidden; box-sizing:border-box;}
+      header .head-content:after{clear:both; display:block; content:"";}
+
+      header h1{float:left; margin-top:10px;}
+      header h1 a{color:#000; text-transform:uppercase;}
+
+      header .nav{display:inline-block; width:100%; margin:auto; vertical-align:middle;}
+      header .nav > ul{display:none;}
+      header .nav > ul.active{display:block;}
+      header .nav > ul:after{clear:both; display:block; content:"";}
+      header .nav > ul li.dep02{float:none; width:100%; overflow: hidden;}
+      header .nav > ul li.dep02 h2{width:100%; margin:0 0px;}
+      header .nav > ul li.dep02 h2 a{padding:5 10px; color:#ebebeb; text-align:center;}
+      header .nav > ul li.dep02.active h2 a{color:#000;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03{display: none; max-height:200px; position:relative; margin-top:0px; transition: none;}
+      header .nav > ul li.dep02.active h2 ~ ul.dep03{display: block; max-height:200px;}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3{}
+      header .nav > ul li.dep02 h2 ~ ul.dep03 li h3 a{padding:4px 0;}
+
+    }
+
+button{
+	width:120px;
+	height: 40px;
+	color:#fff;
+	background: #000000;
+	font-size: 16px;
+	border:none;
+	border-radius: 
+	box-shadow: 0 4px 16px rgba(0,79,255,0.3);
+	transition:0.3s;
+	position: absolute; left: 50%; 
+	
+	transform: translate(-50%,-50%);
+}
+button:focus {
+	outline:0;
+}
+button:hover{
+	background: #252525;
+	cursor: pointer;
+	
+}
+
+		
+	#menubar {
+		background:#A1CFFF ; 
+	}
+	#menubar ul { 
+	margin : 0;
+	padding: 0;
+	width: 1920
+		px;
+		 }
+	
+	#menubar ul li {
+		display :inline-block;
+		list-style-type: none;
+		padding: 20px 20px;
+	}
+
+	#menubar ul li a {
+		color: #FFFFFF;
+		text-decoration: none;
+	}
+	#menubar ul li a:hover {
+		color:#FFF194;
+	}
+	
+		P { background-color: #A1CFFF;;}
+	
+		hr {border: 2px solid #A0CEFF;width: 80px}
+		<style>
+
+/* 중앙정렬 코드- 삭제하고 사용하세요 */
+.gallerylist {position:absolute;top:50%;left:100%;transform:translate(-50%,-50%);}
+* {margin:0;padding:0;box-sizing:border-box;} /* 모든 요소 마진패딩 리셋 */
+/* 중앙정렬 코드-삭제하고 사용하세요 */
+
+.gallerylist {max-width:1920px;width:100%;margin:0 auto;}
+.gallerylist > ul {font-size:0; }
+.gallerylist > ul > li {display:inline-block;vertical-align:top;width:35%;}
+.gallerylist > ul > li > a {display:block;width:auto;text-decoration: none; margin:25px;}
+.gallerylist > ul > li > a .screen {position:relative; overflow:hidden;}
+		
+.gallerylist > ul > li > a .screen .top {position:absolute;top:600;left:10px;z-index:2;color:#fff;font-size:20px;transition:all .35s;}
+.gallerylist > ul > li > a .screen .bottom {position:absolute;top:400;left:10px;z-index:2;color:#fff;font-size:17px;transition:all .35s;}
+		
+.gallerylist > ul > li > a .screen img {width:100%;}
+.gallerylist > ul > li > a h1 {font-size:20px;text-align:center;padding:20px;color:#FFFFFF;}
+.gallerylist > ul > li > a .screen::after {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1;opacity:0; transition:all .35s;}
+
+.gallerylist > ul > li > a:hover .bottom {top:50%;}
+.gallerylist > ul > li > a:hover .screen::after {opacity:80;}
+
+	
+		body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+	.tt 
+		{ position: relative; display: inline-block;  Sienna; background-color: ; } 
+		
+	.tt .tt-text 
+		{ visibility: hidden; width: 200px; background-color: #1D1D1D; color:#FFFFFF ; text-align: center; border-radius: 10px; padding: 10px 5px; position: absolute; z-index: 1; top: 200%; left: 50%; margin-left: -105px; } .tt .tt-text::after { content: ""; position: absolute; bottom: 100%; left: 50%; margin-left: -10px; border-width: 10px; border-style: solid; border-color: transparent transparent #1D1D1D transparent; } .tt:hover .tt-text { visibility: visible; }
+
+		.imgBoxDiv{
+			width: 300px;
+			height: 300px;
+			position: relative;
+			cursor: pointer;
+			overflow: hidden;
+			display: inline-block;
+			
+		}
+		
+		.imgDiv{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: #A1CFFF;
+			z-index: 1;
+			-webkit-transition: all.5s ease;
+			transform: all .5s ease;
+			bottom:0px;
+			overflow: hidden;
+		}
+		
+
+		.imgBoxDiv:hover .imgDiv{
+			bottom:60px;
+		}
+		
+		.imgDescDiv{
+			width: 100%;
+			height: 50px;
+			padding: 5px;
+			color: #FFFFFF;
+			background-color: #A1CFFF;
+			position: absolute;
+			bottom: 0px;
+		}
+	
+		.box1 {
+			display: inline-block;
+            width: 50%;
+            height: px;
+            text-align: center;
+            vertical-align: middle;
+            line-height:50px;
+            color: #000000;
+        }
+        
+		.box2 {
+			display: inline-block;
+            width: 50%;
+            height: px;
+            text-align: left;
+            vertical-align: middle;
+            line-height:50px;
+            color: #000000;
+        }
+        
+        
+		
+		  .container {
+			 margin: 50px;
+            text-align: center;
+            vertical-align: middle;
+            line-height:150px;
+            color: #FFFFFF;
+			  display: inline-block;
+    width: 150px;
+    height: 150px;border-radius: 50%;
+    background: #000000;
+  }
+  
+		
+
+	
+
+		
+		
+    </style>
+
+
+
+
+
+	
+
+
+<center>
+	
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	
+	<header>
+		
+</header>
+
+	<nav id="menubar"><p aline><center> 
+	 <ul>
+		 <li><a href="index.html">홈</a>  </li>
+		 <li><a href="first.html">정의 및 종류</a> </li>
+		<li><a href="second.html">진단 및 치료</a></li>
+		 <li><a href="third.html">수면 Tip</a></li>
+		 
+		
+</ul>
+		
+	</nav>
+<!-- Save for Web Slices (2 분할.psd) -->
+<center> 
+	
+
+	<div style="background:" #FFFFFF;""> <br>
+		
+				<h1> 이젠 푹- 잠들자 !  </h1><br>
+	<hr>
+			<br>
+			잠 못 자는 당신을 위한 다양한 수면 Tip <br>
+		
+    
+</div>
+
+		<img src="images/33.jpg" width="300" height="300" alt="">
+<br>
+		
+		<h1> 잠들기 전 </h1><br>
+		<hr>
+			<br>
+		<h1><font color="#A0CEFF";>1. 긴장을 풀자</h1><br></font>
+		<span style="background-color:#A0CEFF">밤에 잠이 오지 않아 고생이라면 마음을 비우고 긴장을 풀면 잠 오는데 도움이 된다.</span> <br>
+<br>
+	<div class=wrapper>
+    <img src="images/13.jpg" width="400" height="400" alt=""><br>
+    <div class="box1">
+		<details>
+							<summary>더보기</summary>
+		1) 심호흡을 다섯 번 한다. <br>
+		숨을 들이쉬었다 내쉬면 몸의 긴장이 풀린다. <br>
+		손을 배에 대고 호흡할 때 배에 얹은 손이 오르락내리락하는 것을 
+		따라서 숨을 쉬어본다. <br>
+2) 다리에 닿는 침대 시트의 느낌, 방안 온도, 시트나 침대의 냄새에 집중한다.<br>
+		지금 이 순간에 고도로 집중하면 잠에 빠지는 데 도움이 된다.<br>
+3) 발가락을 긴장시키면 실제로 긴장이 많이 풀린다.<br>
+		발가락을 안쪽으로 당기고, 10까지 세고, 이완시키고 다시 10까지 세는 것을 10번 반복한다.<br></div> </details>
+		<br>
+		
+<br>
+		<br>
+		<h1><font color="#A0CEFF";>2. 잠시 다른 일을 하자</h1><br></font>
+		<span style="background-color:#A0CEFF">한동안 잠을 자려고 해보았지만 잠이 오지 않는다면 방에서 나가 잠시 다른 일을 한다.</span><br>
+		<br>
+		<div class=wrapper>
+  <img src="images/35.jpg" width="400" height="400" alt=""></div> 
+    <div class="box1">
+		<details>
+							<summary>더보기</summary>
+		1) 거실이나 집안의 다른 곳으로 가서 
+		졸리기 시작할 때만 침대로 되돌아 온다. <br>
+        2) 조명을 어둡게 하고 너무 자극적인 것은 하지 않는다.<br>
+        3) 지루한 책 읽기, 조용한 음악 듣기, 등
+		긴장을 풀어주는 활동을 한다.
+			</div></details>
+<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>3. 할 일 리스트 작성을 하자</h1><br></font>
+		<span style="background-color:#A0CEFF">내일 할 일을 생각하느라 잠을 이룰 수 없다면 할 일 리스트를 만든다.</span><br>
+		<img src="images/15.jpg" width="400" height="400" alt=""></div>
+		
+		  <div class="box1">
+			  <details>
+							<summary>더보기</summary>
+		1) 종이에 내일 해야 할 일을 모두 적는다. <br>
+2) 스마트폰을 사용하지 않는다.<br>		
+3) 잡념을 떨쳐버린다.<br>
+			</div></details>
+
+			<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>4. 캐모마일 차나 따듯한 우유를 마시자</h1><br></font>
+		<span style="background-color:#A0CEFF">캐모마일 차나 따듯한 우유가 도움이 된다.</span> <br>
+		<img src="images/16.jpg" width="400" height="400" alt=""></div>
+		
+			</div>
+
+		<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>5. 뜨거운 물로 목욕이나 샤워를 하자</h1><br></font>
+		<span style="background-color:#A0CEFF">잠자리에 들기 직전에 체온이 자연스럽게 떨어지기 때문에 따뜻한 목욕 및 샤워는 도움이 된다.</span> <br>
+		
+		<img src="images/18.jpg" width="400" height="400" alt=""><br>
+		
+		<div class="box1">
+			  <details>
+							<summary>더보기</summary>
+		1) 잠자리에 들기 2시간 전에 샤워를 하는 것이 가장 효과가 좋다.<br>
+2) 따뜻한 물로 목욕 및 샤워를 한다.<br>		
+ </details>
+			</div>
+<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>5. 백색 소음을 듣자</h1><br></font>
+		<span style="background-color:#A0CEFF">바깥 소음이나 소란스러운 이웃 때문에 잠들기가 어렵다면 백색 소음을 듣는게 좋다.</span> <br> 
+		
+		<img src="images/34.jpg" width="400" height="400" alt=""><br>
+	
+		  <div class="box1">
+			    <details>
+							<summary>더보기</summary>
+				1) 백색 소음 기계는 배경 소음을 발생시켜 원치않는 소리를 덮는다.<br>
+2) 백색 소음 앱 및 영상을 통해 듣는다.<br>
+ </details>
+				
+
+			</div>
+       <br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>6. 약을 복용하자</h1><br></font>
+		<span style="background-color:#A0CEFF">수면에 도움이 되는 약을 복용하는 것도 도움이 된다. 약을 복용하기 전에 의사와 상의를 해야한다.</span> <br> 
+		
+		<img src="images/19.jpg" width="400" height="400" alt=""><br>
+		
+		  <div class="box1">
+			    <details>
+							<summary>더보기</summary>
+		
+					1) <p class="tt">멜라토닌<span class="tt-text">수면/기상 주기를 돕기 위해 신체에서 생성하는 호르몬</span></p> 보충제를 복용한다. <br>
+		멜라토닌 보충제를 복용하면 졸음이 오고 단기적인 해결책이 될 수 있다. <br>
+		<p class="tt">"USP 인증"<span class="tt-text">복용량과 성분이 포장에 정확히 기재</span></p>이라고 표시된 보충제를 구입한다.<br>
+2) <p class="tt">마그네슘<span class="tt-text">전체적인 수면의 질을 높이는 데 도움</span></p>을 복용한다.<br>
+		매일 300-400mg 또는 조금 더 복용한다. 하지만 매일 1,000mg을 초과하지 않는다. <br>	
+ </details>
+		
+
+			</div>
+       
+	 <br>
+		<br>
+		<Br>
+		<h1> 환경 </h1><br>
+		<hr>
+	
+ 
+			<br>
+			
+</ul>
+		
+		<div class="container">  <span>적정 온도</span>
+			<span>22-24도</span></div>
+	    <div class="container">적정 습도 45-55%</div> 
+		<div class="container">적정 시간 7-8시간</div>
+	<br>
+			<br>
+			<br>
+	
+
+
+		<h1> 수면습관 </h1><br>
+		<hr>
+			<br>
+		<h1><font color="#A0CEFF";>1. 수면 스케줄을 지키자</h1><br></font>
+		
+<img src="images/20.jpg" width="400" height="400" alt=""><br>
+		  <div class="box1">
+			   <details>
+							<summary>더보기</summary>
+		
+					 1. 장기적으로 수면 습관을 개선하고 싶다면 확고한 수면 스케줄을 짠다. <br>
+	    2. 신체는 생체 리듬에 따라 수면/기상 시간을 정한다. <br>
+			  3. 잠들려고 노력하고 매일 같은 시간에 일어나면 더 쉽게 잠들고 일어날 수 있다. <br>
+            4. 원하는 시간에 잠을 자게 되기까지 매일 밤 20-30분씩 앞당겨서 잠자리에 든다 <br>
+          5. 주말에도 스케줄을 지긴다. <br>
+ </details>
+		
+			</div>
+			<br>
+				<br>
+		<br>
+				
+		<h1><font color="#A0CEFF";>2. 밝은 빛을 피하라</h1><br></font>
+		
+<img src="images/21.jpg" width="400" height="400" alt=""><br>
+		  <div class="box1">
+			   <details>
+							<summary>더보기</summary>
+		노트북, 태블릿, 스마트폰 등 전자기기는 자극적이고 수면을 방해하는 "블루 라이트"를 방출한다. <br>
+			  잠자리에 들기 전에 이런 기기를 사용하는 것을 지양하고 블루 라이트를 줄이는 방법을 찾아본다.<br>
+ </details>
+		
+		 
+		 
+			</div>
+		<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>3. 자기 전 음식을 주의하라</h1><br></font>
+		
+<img src="images/22.jpg" width="400" height="400" alt=""><br>
+		  <div class="box1">
+		  <details>
+							<summary>더보기</summary>
+		
+					
+			  잠자리에 들기 전에 잔뜩 음식을 먹으면 위에 부담이 되서 밤에 잠을 못 이룬다. <br>
+		  잠자리에 들기 전에 배가 고프면 저칼로리이고 복합 탄수화물을 먹는다.
+ </details>
+		
+			</div>
+		<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>4. 침구를 바꿔라</h1><br></font>
+		
+<img src="images/23.jpg" width="400" height="400" alt=""><br>
+		  <div class="box1">
+			   <details>
+							<summary>더보기</summary>
+		
+				
+			 1. 가급적이면 공기가 잘 통하고 통기성이 좋은 면 침구를 사용한다. <br>
+			 2. 시트, 이불, 베개, 베갯잇의 라벨을 확인하여 자극을 주는 것을 피한다. <br>
+			 3. 베개는 시간이 지나면서 탄탄함을 잃기 때문에 탄력이 없다면 새것으로 교체한다.<br>
+				   
+ </details>
+		
+		  
+			  
+			</div>
+		
+	 <br>
+			<br>
+			<br>
+			
+		<h1> 생활습관 </h1><br>
+		<hr>
+			<br>
+			
+		<h1><font color="#A0CEFF";>1. 운동을 해라</h1><br></font>
+		
+<img src="images/24.jpg" width="400" height="400" alt=""><br>
+		  
+			    <div class="box1">
+			   <details>
+							<summary>더보기</summary>
+		운동은 수면에 도움이 되고, 전반적인 건강 상태를 향상시키며, 스트레스 관리에 도움이 된다.<br>
+			  1. 매일 10분만 유산소 운동을 하면 수면의 질이 높아진다. <br>
+			  2. 일주일에 몇 번 조깅, 자전거 타기 등 유산소 운동을 병행하면 더 빨리 잠들 수 있다. <br>
+			  3. 아침이나 늦은 오후에 운동을 한다.  <br>
+		
+				   
+ </details>
+		
+		  <br>
+			 
+			</div>
+		
+		<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>2. 니코틴, 알코올, 카페인을 줄여라</h1><br></font>
+		
+<img src="images/25.jpg" width="400" height="400" alt=""><br>
+		  
+			  <div class="box1">
+			   <details>
+							<summary>더보기</summary>
+		
+				
+			 
+			 니코틴과 카페인은 체내에 장시간 머무르는 자극제이다. <br>
+			  밤늦게 담배를 피우거나 커피를 마시면 잠들기 어렵다.<br>
+			 1. 이른 오후가 지나서 커피를 마시는 것을 피한다.  <br>
+			 2. 흡연자는 담배를 끊는다.   <br>
+			 3. 알코올은 졸리게 만들지만 수면의 질이 떨어지므로 밤에 술을 한두 잔 이상 마시지 않는다.<br>
+				   
+ </details>
+		
+			 
+			</div>
+		
+		<br>
+			<br>
+			<br>
+		<h1><font color="#A0CEFF";>3. 스트레스를 관리해라</h1><br></font>
+		
+<img src="images/26.jpg" width="400" height="400" alt=""><br>
+		 
+			    <div class="box1">
+			   <details>
+							<summary>더보기</summary>
+		
+				
+			삶에서 스트레스를 많이 받으면 밤에 깨어있게 된다. <br>
+			  수면의 질을 높이고 싶다면 전반적으로 스트레스 수준을 낮추어야 한다.<br>
+           1. 정리정돈을 하여 주변을 더 깨끗이 치우는 것 같은 작은 변화가 스트레스에 큰 영향을 미친다.<br>
+		  2. 하루 종일 너무 열심히 일하도록 자신을 몰아붙이지 않고 10-15분 휴식을 취한다.<br>
+            3. 요가, 명상, 심호흡 등 스트레스를 줄이는 활동을 한다.<br>
+				   
+ </details>
+		
+		  
+
+			</div>
+		
+		
+	 <br>
+			<br>
+			<br>
+		<h1> 음식 </h1><br>
+		<hr>
+			<br>
+	<div class="imgBoxDiv">
+		
+		<div class="imgDiv"><img src="images/27.jpg" width="300" height="300" alt=""></div>
+			<div class="imgDescDiv">체리 - 수면을 유도하는 멜라토닌 성분이 함유</div>
+		</div>
+	
+			<div class="imgBoxDiv">
+		
+		<div class="imgDiv"><img src="images/28.jpg" width="300" height="300" alt=""></div>
+			<div class="imgDescDiv">키위 - 세로토닌 수치를 높이는 작용</div>
+		</div>
+			
+			<div class="imgBoxDiv">
+		
+		<div class="imgDiv"><img src="images/29.jpg" width="300" height="300" alt=""></div>
+			<div class="imgDescDiv">바나나 - 숙면에 도움이 되는 트립토판 성분 함유</div>
+		</div>
+		<br>
+		<div class="imgBoxDiv">
+		
+		<div class="imgDiv"><img src="images/30.jpg" width="300" height="300" alt=""></div>
+			<div class="imgDescDiv">우유 - 숙면에 도움이 되는 트립토판 성분 함유</div>
+		</div>
+		
+	<div class="imgBoxDiv">
+		
+		<div class="imgDiv"><img src="images/31.jpg" width="300" height="300" alt=""></div>
+			<div class="imgDescDiv">아몬드 - 근육의 긴장을 푸는데 도움이 되는 마그네슘을 함유</div>
+		</div>
+			<div class="imgBoxDiv">
+		
+			<div class="imgBoxDiv">
+		
+		<div class="imgDiv"><img src="images/32.jpg" width="300" height="300" alt=""></div>
+			<div class="imgDescDiv">상추 - 수면, 진정효과가 있는 락투카리움 성분 함유</div>
+		</div>
+	
+			
+					  
+	</a></div>
+<!-- End Save for Web Slices -->
+</body>
+		   
+        
+    
+</html>
